@@ -1,11 +1,20 @@
 "use strict"
-/*Se pueden declarar variables sin necesidad de utilizar la palabra var pero eso una mala práctica, para evitar ese tipo de malas prácticas al principio de cada archivo js se debe de declarar la frase "use strict". Esto forza a que en el archivo force a utilizar las palabras reservadas solamente para el uso al cual fue destinado, por ejemplo public es una palabra reservada, y no se puede utilizar como el nombre de una variable.
 
- x="3.1416";
-sin "use strict" en la consola se mostrará que no hay errores, y al llamar la variable se mostrará correctamente
-cuando se utiliza el "use strict" se deberá de utilizar las palabras reservadas para su funcionamiento correcto y buenas prácticas, en este ejemplo cuando ya se utiliza el "use strict" en la consola se mostrará que hay un error en el archivo ya que hay una variable no declarada, y se deberá utilizar la palabra var para declarar la variable
- */
-alert("Hola desde un archivo externo");
-console.log("Hola consola");
+/*
+las variables son de tipo de destructivas, si se le ingresa primero un valor, y despues se le ingresa otro valor, el primer valor desaparecerá y no se podrá recuperar de ninguna manera
 
- var x=3.1416;
+Para defninir el alcance de una variable existen dos formas de definirlo, una con la palabra reservada var, que esta se convierte en una variable global o sea que no importa si existe dentro de una funcion o una estructura de datos, y si se quiere utilizar una variable de bloque o variable local e deberá utilizar la palabra reservada let ya sea q se quiera utilizar solamente en una funcio o estructura de datos
+
+*/
+var nombre="Eduardo";
+
+console.log(nombre);
+
+function saludo(){
+    let nombre="Campos";
+    console.log(nombre);
+
+    let edad=27;
+    console.log(edad);
+}
+console.log(edad);
